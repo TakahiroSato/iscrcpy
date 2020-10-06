@@ -34,9 +34,7 @@ func main() {
 
 	var extraOptions []string
 	if len(os.Args) > 1 {
-		for i := 1; i < len(os.Args); i++ {
-			extraOptions = append(extraOptions, os.Args[i])
-		}
+		extraOptions = append(extraOptions, os.Args[1:]...)
 	}
 
 	args = append(args, extraOptions...)
